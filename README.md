@@ -7,3 +7,8 @@
 
 # Send Message
 ![token generate/ user login ](https://github.com/HarshaVardhanAcharyAthaluri/spring_boot_3_Kafka/blob/main/kafkamessage.JPG)
+
+# These properties Helps us to read unconsumed message after springboot consumer restart
+* spring.kafka.consumer.group-id=spring-consumer
+* spring.kafka.consumer.auto-offset-reset=earliest
+* spring.kafka.consumer.enable-auto-commit=true
