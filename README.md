@@ -12,3 +12,6 @@
 * spring.kafka.consumer.group-id=spring-consumer
 * spring.kafka.consumer.auto-offset-reset=earliest
 * spring.kafka.consumer.enable-auto-commit=true
+
+# Angular app.module.ts
+* ng new --no-standalone

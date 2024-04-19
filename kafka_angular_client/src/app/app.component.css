@@ -1,0 +1,27 @@
+.logoheader{
+    background: rgb(5, 68, 104);
+    border-radius: 0%;
+    height: 80px;
+}
+.headercontent{
+    display: table;
+    margin: auto;
+    color: white;
+    padding-top: 5px;
+    font-size: 40px;
+
+}
+
+.logoheader a{
+    text-decoration: none;
+    color: white;
+}
+
+.consignments{
+    margin-left: 250px;
+    margin-top: 25px;
+    margin-right: 50px;
+    text-align: center;   
+}
+
+
