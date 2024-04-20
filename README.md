@@ -15,3 +15,6 @@
 
 # Angular app.module.ts
 * ng new --no-standalone
+
+# websocket
+npm install --save sockjs-client stompjs
