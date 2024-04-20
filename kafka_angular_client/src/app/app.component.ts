@@ -17,23 +17,22 @@ import { WebsocketService } from './websocket.service';
   providers:[HttpClient]
 })
 export class AppComponent {
-  title = 'WebSocketClient';
-  public notifications:any;
+  public notifications :any;
 
-  constructor(private webSocketService:WebsocketService){
-// Open connection with server socket
-let stompClient = this.webSocketService.connect();
+    constructor(private webSocketService: WebsocketService) {
 
-stompClient.connect({}, (frame: any) => {
-console.log(frame);
-// Subscribe to notification topic
-    stompClient.subscribe('/greettopic/hello', (notifications: any) => {
-console.log('notifications ::: '+notifications);
-// Update notifications attribute with the recent messsage sent from the server
-        this.notifications = notifications;
-    })
-});
-  }
+		// Open connection with server socket
+        let stompClient = this.webSocketService.connect();
+        stompClient.connect({}, frame => {
+
+			// Subscribe to notification topic
+            stompClient.subscribe('/greettopic/hello', notifications => {
+console.log("notifications:: "+notifications);
+				// Update notifications attribute with the recent messsage sent from the server
+                this.notifications = notifications.body;
+            })
+        });
+    }
  
   
 }
